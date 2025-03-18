@@ -18,4 +18,4 @@ Desarrollar un juego en el que el usuario pueda agregar nombres de sus amigos a 
 
 
 ## Aquí puedes ver una pequeña demostración:
-![Vista previa del proyecto]()
+![Vista previa del proyecto](https://github.com/Blanca-412/challenge-1-amigo-secreto/blob/main/DemoAmigoSecreto.gif)
