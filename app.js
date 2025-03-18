@@ -17,15 +17,14 @@ function agregarAmigo() {
         alert("Por favor, inserte un nombre.");
     } else {
         if (amigos.includes(nuevoAmigo)){
-            //lista.innerHTML = "";
             limpiarCampo();
         } else {
         //actualizaAmigo("amigoAgregado", nuevoAmigo);
         amigos.push(nuevoAmigo);
         limpiarCampo();
         agregaLista(nuevoAmigo, lista);
+        }
     }
-}
 }
 
 function limpiarCampo() {
@@ -36,6 +35,26 @@ function agregaLista(nombre, lista) {
     let nuevoElemento = document.createElement("li");
     nuevoElemento.textContent = nombre;
     lista.appendChild(nuevoElemento);
+}
+
+function mostrarResultado(elemento,texto) {
+    let elementoHTML = document.getElementById(elemento);
+    elementoHTML.innerHTML = texto;
+    return;
+}
+
+function sortearAmigo() {
+    if (amigos.length == 0) {
+        alert ("Opción no válida. Por favor, inserte un nombre.")
+    } else {
+        let indiceAmigo = Math.floor(Math.random()*amigos.length)+1;
+        console.log (indiceAmigo);
+        let amigoSorteado = amigos [indiceAmigo -1];
+        console.log (amigoSorteado);
+        mostrarResultado("resultado", amigoSorteado);
+        document.getElementById("listaAmigos").innerHTML = "";
+        
+    }
 }
 
 /*function actualizaAmigo() {
